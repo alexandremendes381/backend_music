@@ -6,7 +6,6 @@ from music.views import Arquivosviewsets, export_audio
 from django.conf import settings
 from django.conf.urls.static import static
 
-
 router = routers.DefaultRouter()
 router.register(r'arquivos', Arquivosviewsets)
 router.register(r'cadastro', Cadastroviewsets)
@@ -17,5 +16,4 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('api/', include('rest_framework.urls')),
     path('export/audio/<int:audio_id>/', export_audio, name='export_audio'),
-]
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
