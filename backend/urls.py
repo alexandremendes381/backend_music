@@ -5,10 +5,11 @@ from rest_framework import routers
 from music.views import Arquivosviewsets, export_audio
 from django.conf import settings
 from django.conf.urls.static import static
-
+from video.views import VideoViewSet
 router = routers.DefaultRouter()
 router.register(r'arquivos', Arquivosviewsets)
 router.register(r'cadastro', Cadastroviewsets)
+router.register(r'videos', VideoViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
