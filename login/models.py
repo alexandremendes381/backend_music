@@ -2,6 +2,7 @@ from django.db import models
 
 
 class CadastroModel(models.Model):
+    selfie = models.FileField(upload_to='uploads/')
     name = models.CharField(max_length=80)
     birthdate = models.IntegerField()
     cep = models.CharField(max_length=10, default='')
