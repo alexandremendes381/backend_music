@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     'music',
     'video',
     "drf_yasg",
+    'postspage',
 ]
 
 
