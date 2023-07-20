@@ -7,6 +7,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from video.views import VideoViewSet
 from postspage.views import postsModelviewsets
+from rareimages.views import ImagesModelviewsets
 from drf_yasg import openapi
 
 # SWAGGER
@@ -20,6 +21,7 @@ router.register(r'arquivos', Arquivosviewsets)
 router.register(r'cadastro', Cadastroviewsets, basename='cadastro')
 router.register(r'videos', VideoViewSet)
 router.register(r'posts', postsModelviewsets)
+router.register(r'ImagesRare', ImagesModelviewsets)
 
 
 class BothHttpAndHttpsSchemaGenerator(OpenAPISchemaGenerator):
