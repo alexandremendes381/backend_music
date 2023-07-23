@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
-from login.views import Cadastroviewsets
+from loginAndRegister.views import Cadastroviewsets
 from rest_framework import routers
 from music.views import Arquivosviewsets, export_audio
 from django.conf import settings
@@ -8,6 +8,7 @@ from django.conf.urls.static import static
 from video.views import VideoViewSet
 from postspage.views import postsModelviewsets
 from rareimages.views import ImagesModelviewsets
+from termsOfUsePage.views import termsModelviewsets
 from drf_yasg import openapi
 
 # SWAGGER
@@ -21,6 +22,7 @@ router.register(r'arquivos', Arquivosviewsets)
 router.register(r'cadastro', Cadastroviewsets, basename='cadastro')
 router.register(r'videos', VideoViewSet)
 router.register(r'posts', postsModelviewsets)
+router.register(r'terms', termsModelviewsets)
 router.register(r'ImagesRare', ImagesModelviewsets)
 
 

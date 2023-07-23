@@ -53,7 +53,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'login',
+    'loginAndRegister',
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
@@ -63,6 +63,7 @@ INSTALLED_APPS = [
     "drf_yasg",
     'postspage',
     'rareimages',
+    'termsOfUsePage',
 ]
 
 
